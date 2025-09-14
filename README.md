@@ -95,7 +95,7 @@
     <tr>
       <td style="border: 1px solid #000; padding: 8px;">藍芽模組電路</td>
       <td style="border: 1px solid #000; padding: 8px;">
-        <img src="https://hackmd.io/_uploads/B1uNXYd_xg.jpg" alt="藍芽電路" width="200">
+        <img src="./images/bluetooth.jpg" alt="藍芽電路" width="200">
       </td>
     </tr>
     <tr>
