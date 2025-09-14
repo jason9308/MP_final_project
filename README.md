@@ -1,9 +1,13 @@
+# 微算機
+
 
 # 微算機期末專題文件 主題：藍芽遙控消防車
 
+![image](https://hackmd.io/_uploads/Bywy8Kudgg.png)
+
 
 ## 一、系統功能與原理說明 
-### 藍芽控制
+### 藍芽控制（遙控車、背景音樂、雲梯）
 使用自撰Android app送出特定訊號，經由藍牙模組和PIC18F遠端控制直流馬達、無源蜂鳴器、步進馬達，個別對應到遙控車(L298N馬達模組)、音樂播放(蜂鳴器模組)、雲梯(ULN2003驅動板 + 28BYJ-48步進馬達)功能。
 ### 環境感測器及對應裝置
 使用火焰感測模組、煙霧感測模組、光敏電阻模組，當模組偵測到特定事件發生，透過PIC18F啟動對應的裝置：通電沉水馬達來消滅火源、通電直流馬達風扇來驅散煙霧、通電LED以照亮環境。
@@ -94,25 +98,25 @@
     <tr>
       <td style="border: 1px solid #000; padding: 8px;">藍芽模組電路</td>
       <td style="border: 1px solid #000; padding: 8px;">
-        <img src="https://hackmd.io/_uploads/BJdwlF5P1e.jpg" alt="藍芽電路" width="200">
+        <img src="https://hackmd.io/_uploads/B1uNXYd_xg.jpg" alt="藍芽電路" width="200">
       </td>
     </tr>
     <tr>
       <td style="border: 1px solid #000; padding: 8px;">遙控車電路</td>
       <td style="border: 1px solid #000; padding: 8px;">
-        <img src="https://hackmd.io/_uploads/rkwgn_5vkx.png" alt="遙控車電路" width="200">
+        <img src="https://hackmd.io/_uploads/HyWv7tu_ge.jpg" alt="遙控車電路" width="200">
       </td>
     </tr>
     <tr>
       <td style="border: 1px solid #000; padding: 8px;">蜂鳴器電路</td>
       <td style="border: 1px solid #000; padding: 8px;">
-        <img src="https://hackmd.io/_uploads/BJiT0dcvJx.jpg" alt="蜂鳴器電路" width="200">
+        <img src="https://hackmd.io/_uploads/BypP7Y_dee.jpg" alt="蜂鳴器電路" width="200">
       </td>
     </tr>
     <tr>
       <td style="border: 1px solid #000; padding: 8px;">雲梯電路</td>
       <td style="border: 1px solid #000; padding: 8px;">
-        <img src="https://hackmd.io/_uploads/S1dtGF5PJx.jpg" alt="雲梯電路" width="200">
+        <img src="https://hackmd.io/_uploads/rJxR7Yddex.jpg" alt="雲梯電路" width="200">
       </td>
     </tr>
     <tr>
@@ -140,8 +144,9 @@
 
 
 
-其餘設計可參考[八、影片及原始碼連結](#八、影片及原始碼連結)
 
+
+---
 
 ## 四、系統開發工具、材料及技術 
 我們使用MPLAB X IDE v5.20和MPLAB® PICkit™ 4 In-Circuit Debugger作為我們的系統開發工具；材料的部分：
@@ -254,17 +259,8 @@ FRESULT f_close (
 FIL Fil;
 f_close(&Fil);
 ```
-## 六、實際組員之分工項目
 
-| 組員名稱  | 分工項目                                   |
-|-----------|----------------------------------------|
-| 戴宇澤    | SD卡模組、外部感測模組及對應輸出裝置         |
-| 楊承翰    | SD卡模組、外部感測模組及對應輸出裝置         |
-| 楊証淇    | L298N馬達模組、雲梯模組、蜂鳴器模組          |
-| 陳驛鑫    | 藍芽App程式碼撰寫&設計、美術                 |
-
-
-## 七、遇到的困難及如何解決
+## 六、遇到的困難及如何解決
 ### SD卡寫入不穩定問題
 我們使用polling的方法，當偵測到火焰/煙霧感測器訊號就寫入對應字串，但是發現寫入的結果有亂碼產生。
 解決方法：
@@ -298,6 +294,5 @@ PIC18F4520 的輸出：
 解決方法：
 >為了能夠在播放音樂的同時也能夠控制車子，我們將音樂的播放改為timer interrupt的方式。音符的持續時間不再用delay來達成，而是使用timer0。
 >調整PR2來讓PWM的頻率符合音符的頻率後，再調整TMR0來控制音符持續的時間。而polling的藍芽控制就可以在兩個音的間隔之間照常運行。
-## 八、影片及原始碼連結
+## 八、DEMO影片
 [影片](https://youtu.be/agV0DLyJANU)
-[原始碼](https://github.com/Danielaaaaa0w0/MP_final_project)
