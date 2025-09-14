@@ -95,25 +95,25 @@
     <tr>
       <td style="border: 1px solid #000; padding: 8px;">藍芽模組電路</td>
       <td style="border: 1px solid #000; padding: 8px;">
-        <img src="./images/bluetooth.jpg" alt="藍芽電路" width="200">
+        <img src="https://hackmd.io/_uploads/B1uNXYd_xg.jpg" alt="藍芽電路" width="200">
       </td>
     </tr>
     <tr>
       <td style="border: 1px solid #000; padding: 8px;">遙控車電路</td>
       <td style="border: 1px solid #000; padding: 8px;">
-        <img src="./images/car.jpg" alt="遙控車電路" width="200">
+        <img src="https://hackmd.io/_uploads/HyWv7tu_ge.jpg" alt="遙控車電路" width="200">
       </td>
     </tr>
     <tr>
       <td style="border: 1px solid #000; padding: 8px;">蜂鳴器電路</td>
       <td style="border: 1px solid #000; padding: 8px;">
-        <img src="./images/buzzer.jpg" alt="蜂鳴器電路" width="200">
+        <img src="https://hackmd.io/_uploads/BypP7Y_dee.jpg" alt="蜂鳴器電路" width="200">
       </td>
     </tr>
     <tr>
       <td style="border: 1px solid #000; padding: 8px;">雲梯電路</td>
       <td style="border: 1px solid #000; padding: 8px;">
-        <img src="ladder.jpg" alt="雲梯電路" width="200">
+        <img src="https://hackmd.io/_uploads/rJxR7Yddex.jpg" alt="雲梯電路" width="200">
       </td>
     </tr>
     <tr>
